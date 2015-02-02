@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>kujiale</title>
+	<script type="text/javascript" src="/js/jquery.js"></script>	
+	<script type="text/javascript" src="/js/popup.js"></script>
+
+	 <style>
+         body {margin:0; font-family:'Microsoft YaHei';}
+         a {text-decoration:none;}
+         p {margin:0;}
+        .not-logined {width:135px; padding:3px;}
+        .not-logined a {display:block; width:70px; padding-left:25px; margin:auto; background:url("avatar.png") no-repeat 0 center; color: #666;}
+        
+        .logined {width:300px;}
+		.logined.loading {min-height:50px; background: url("loading.gif") no-repeat center center;}
+        .logined .hd {padding:10px 20px 0; color:#666;}
+        .logined .hd .number {margin:0 5px; color:#077; font-weight:bold;}
+        .logined.loading .hd {display:none;}
+        .logined .bd {padding:10px;}
+		.logined .stripe {display:none; position:relative; padding:5px 10px 7px 52px; line-height:22px; text-align:left; white-space:nowrap; background-color:#fff; }
+		.logined .stripe.active {display:block;}
+		.logined .stripe:hover { background:#f3f5f7; }
+		.logined .stripe.active { white-space:normal; }
+		.logined .stripe .pic{ position:absolute; left:10px; top:10px; width:32px; height:32px; overflow:hidden;}
+		.logined .stripe .pic img{height:32px; width:32px; border-radius:3px;}
+		.logined .stripe span { color:#999;}
+		.logined .stripe p {position:relative; top:-3px;}
+		.logined .stripe a {color:#999;}
+		.logined .stripe a.blue {color:#07b;}
+		.logined .stripe .pic a:hover{text-decoration: underline;}
+        .logined .stripe .ops {overflow:hidden;}
+        .logined .stripe .ops .J_next {float:right; margin-right:20px; color:#999;}
+        .logined .stripe .ops .J_next:hover {color:#666;}
+        .logined .stripe .ops .J_check {float:right; padding:0 10px; border-radius:3px; background-color:#37b5f9; color:#fff;}
+        .logined .stripe .ops .J_check:hover {opacity:.9;}
+	 </style>
+</head>
+<body>
+    <div class="not-logined" style="display:none;">
+        <a href="#" class="J_login login">
+            <span>请登录</span>
+        </a>
+    </div>
+
+    <div class="logined loading" style="display:none;">
+        <div class="hd">
+            <span>您有
+                <a class="inbox-num number" href="http://www.kujiale.com/u/inbox" target="_blank">?</a>条未读私信，
+                <a class="noti-num number" href="http://www.kujiale.com/u/notice" target="_blank">?</a>条未读通知。
+            </span>
+        </div>
+        <div class="bd">
+            <!-- <div class="noti-item">
+                <img class="avatar" src="http://qhyxpic.oss.kujiale.com/avatars/2014/12/05/KSAV3X2DM5CXAJSYABAQAAAA.jpg@!60x60" />
+                <div class="cont">
+                    <p class="user-info">
+                        <a href="" class="J_uname uname">完美辣妹子</a>
+                        <span>评论了您的帖子</span>
+                    </p>
+                    <p class="noti">
+                        <a href="" class="J_noti-addr">能改三房吗？入户改为餐厅？原餐厅改为阅读角？</a>
+                    </p>
+                </div>
+                <div class="ops">
+                    <a href="javascript:;" class="J_check">查看</a>
+                    <a href="javascript:;" class="J_next">下一条</a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
